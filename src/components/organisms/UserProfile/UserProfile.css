@@ -1,0 +1,11 @@
+.lho_userimage {
+  height: 150px;
+  width: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .lho_userimage {
+    height: 80px;
+    width: 80px;
+  }
+}

@@ -1,0 +1,65 @@
+.lho_addpost_container {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+  bottom: 60px;
+  right: 60px;
+  width: 60px !important;
+  height: 60px !important;
+}
+
+.lho_addpost_button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  width: 60px !important;
+  height: 60px !important;
+  border-radius: 500px !important;
+  box-shadow: 0px 1px 50px #00000017 !important;
+  border: 1px solid #e4e4e4 !important;
+  padding: 0 !important;
+}
+
+.lho_addpost_button_animation {
+  width: 60px;
+  height: 60px;
+  border-radius: 500px;
+  background-color: #1a73e7;
+  position: relative;
+  animation-name: beam;
+  animation-duration: 1s;
+  animation-iteration-count: 5;
+  animation-delay: 4s;
+  opacity: 0.3;
+}
+
+@keyframes beam {
+  0% {
+    transform: scale(1);
+  }
+  35% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lho_addpost_container {
+    bottom: 15px;
+    right: 15px;
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  .lho_addpost_button {
+    width: 50px !important;
+    height: 50px !important;
+  }
+  .lho_addpost_button_animation {
+    width: 50px;
+    height: 50px;
+  }
+}

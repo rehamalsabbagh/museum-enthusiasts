@@ -1,0 +1,25 @@
+div {
+  background-size: cover;
+}
+
+.page_container {
+  width: 50%;
+}
+
+@media screen and (max-width: 1199px) {
+  .page_container {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .page_container {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page_container {
+    width: calc(100% - 30px);
+  }
+}

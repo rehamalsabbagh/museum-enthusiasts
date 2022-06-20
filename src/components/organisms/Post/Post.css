@@ -1,0 +1,9 @@
+.lho_post {
+  border-radius: 1px !important;
+  box-shadow: none !important;
+}
+
+.lho_post_info {
+  font-size: 0.86rem !important;
+  color: grey;
+}

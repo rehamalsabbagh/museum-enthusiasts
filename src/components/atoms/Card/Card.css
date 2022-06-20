@@ -1,0 +1,17 @@
+.lho_card {
+  border-radius: 3px;
+  box-shadow: #00000017 0px 0px 15px;
+  background-color: #ffffff;
+  border: 1px solid #e4e4e4;
+}
+
+.lho_card_header {
+  border-radius: 6px 6px 0px 0px;
+  background-color: #413a3a;
+  padding: 5px 20px;
+  color: #fff;
+}
+
+.lho_card_padding {
+  padding: 17px;
+}

@@ -1,0 +1,6 @@
+.lho_menu_item {
+  transition: opacity 0.15s;
+}
+.lho_menu_item:hover {
+  opacity: 1 !important;
+}

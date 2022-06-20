@@ -1,0 +1,9 @@
+[dir='ltr'] .lho_align_start,
+[dir='rtl'] .lho_align_end {
+  text-align: left;
+}
+
+[dir='ltr'] .lho_align_end,
+[dir='rtl'] .lho_align_start {
+  text-align: right;
+}

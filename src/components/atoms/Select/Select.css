@@ -1,0 +1,28 @@
+.lho_select {
+  border: 0;
+  background-color: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.lho_select.flat,
+.lho_select.bordered {
+  color: #7c7c7c;
+  height: 46px;
+  border-radius: 5px;
+  background-color: #ececec;
+  padding: 0 15px;
+  background-image: url(https://websiteimages.b-cdn.net/arrow-down-gray.png);
+  background-position: center right 15px;
+  width: 100%;
+}
+
+.lho_select.bordered {
+  border: 2px solid;
+}
+
+.lho_select.icon {
+  color: transparent;
+}

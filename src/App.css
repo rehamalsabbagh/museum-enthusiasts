@@ -1,0 +1,89 @@
+* {
+  background-repeat: no-repeat;
+}
+
+.App {
+  text-align: center;
+}
+
+div {
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background-color: #f7f7f7;
+  font-size: 16px;
+  color: #454545;
+  font-weight: 200;
+}
+
+input,
+button,
+select {
+  font-weight: 100;
+  font-family: sans-serif;
+}
+
+input:focus,
+button:focus,
+select:focus {
+  outline: 0;
+}
+
+a,
+a:focus {
+  color: initial;
+  text-decoration: none;
+}
+
+.fa-xs {
+  height: 10px;
+  width: 10px;
+  background-size: 10px;
+  font-size: 10px;
+}
+
+.fa-sm {
+  height: 15px;
+  width: 15px;
+  background-size: 15px;
+  font-size: 15px;
+}
+
+.fa-md {
+  height: 20px;
+  width: 20px;
+  background-size: 20px;
+  font-size: 20px;
+}
+
+.fa-lg {
+  height: 25px;
+  width: 25px;
+  background-size: 25px;
+  font-size: 25px;
+}
+
+.fa-xlg {
+  height: 30px;
+  width: 30px;
+  background-size: 30px;
+  font-size: 30px;
+}
+
+.fa-xxlg {
+  height: 35px;
+  width: 35px;
+  background-size: 35px;
+  font-size: 35px;
+}
