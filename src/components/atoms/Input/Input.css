@@ -1,15 +1,15 @@
-.lho_input_container {
+.arten_input_container {
   height: 46px;
   border-radius: 3px;
   background-color: #ececec;
   padding: 0px 15px;
 }
 
-.lho_input_container.bordered {
+.arten_input_container.bordered {
   border: 1px solid;
 }
 
-.lho_input {
+.arten_input {
   border: none;
   outline: 0px;
   width: 100%;
@@ -22,15 +22,15 @@
   color: #7c7c7c;
 }
 
-.lho_input:focus {
+.arten_input:focus {
   outline: 0px;
 }
 
-.lho_input_prefix {
+.arten_input_prefix {
   margin-top: -1px;
 }
 
-.lho_error_1 {
+.arten_error_1 {
   background-color: #fef3f3 !important;
   border-color: #eadada !important;
 }

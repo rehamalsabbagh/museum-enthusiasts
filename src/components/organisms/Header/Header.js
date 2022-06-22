@@ -12,11 +12,12 @@ import './Header.css';
 import { useVm } from '../../../context';
 
 const account_src =
-  'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_grey_512dp.png';
+  'https://i.ibb.co/grzPnFq/avatar-circle-grey-512dp.png';
 const signout_src =
-  'https://www.flaticon.com/svg/static/icons/svg/251/251376.svg';
+  'https://i.ibb.co/S7rLfgT/logout.png';
 const search_src =
-  'https://www.flaticon.com/svg/static/icons/svg/482/482631.svg';
+  'https://i.ibb.co/GTZgMYF/search-interface-symbol-1.png';
+
 
 function Header() {
   const { signInStore } = useAppContext();
@@ -30,12 +31,12 @@ function Header() {
   return (
     <React.Fragment>
       <SearchAccounts popupStore={popupStore} />
-      <Container className={'lho_header'}>
+      <Container className={'arten_header'}>
         <Container className={'page_container'}>
           <Row portitions={{ lg: [0.5, 0.5] }} verticalAlign={'middle'}>
             <Align align={{ lg: 'start' }}>
               <Link to={'/'}>
-                <TextLogo text={'Letshangout'} />
+                <TextLogo text={'artenthusiasts'} />
               </Link>
             </Align>
             <Align align={{ lg: 'end' }}>

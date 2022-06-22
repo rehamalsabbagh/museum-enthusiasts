@@ -6,7 +6,7 @@ button {
   transition: all 0.2s;
 }
 
-.lho_button {
+.arten_button {
   border: none;
   outline: 0px;
   height: 40px;
@@ -17,18 +17,18 @@ button {
   width: 100%;
 }
 
-.lho_button:focus {
+.arten_button:focus {
   outline: 0px;
 }
 
-.lho_button.bordered {
+.arten_button.bordered {
   border: 0.5px solid;
 }
 
-.lho_button.solid {
+.arten_button.solid {
   box-shadow: 0px 1px 2px #00000017;
 }
 
-.lho_button.solid:hover {
+.arten_button.solid:hover {
   box-shadow: 0px 1px 2px #0000000a;
 }

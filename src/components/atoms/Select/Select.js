@@ -22,7 +22,7 @@ function Select(props) {
   let style = GeneralUtil.responsiveObj(props.style);
   let className =
     props.className +
-    ' lho_select ' +
+    ' arten_select ' +
     props.shape +
     ' fa-' +
     props.iconSize +
@@ -63,7 +63,7 @@ Select.defaultProps = {
   textKeys: [default_textkeys],
   title: '',
   primaryColor: 'gray',
-  onChange: () => {},
+  onChange: () => { },
 };
 
 export default Select;

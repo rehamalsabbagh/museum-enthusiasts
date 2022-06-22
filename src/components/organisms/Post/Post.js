@@ -15,17 +15,20 @@ import AccountsList from '../AccountsList/AccountsList';
 import PopupStore from '../../atoms/Popup/PopupStore';
 
 const account_src =
-  'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_grey_512dp.png';
+  'https://i.ibb.co/grzPnFq/avatar-circle-grey-512dp.png';
 const date_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/2948/2948239.svg';
+  'https://i.ibb.co/fSWdDjY/calendar.png';
 const time_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/2088/2088617.svg';
+  'https://i.ibb.co/VWqZhPz/three-o-clock-clock.png';
 const location_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/1008/1008001.svg';
+  'https://i.ibb.co/HYRxZKg/pin.png'
 const attend_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/1189/1189164.svg';
+  'https://i.ibb.co/dLyvmdg/heart.png';
 const attend_colored_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/1189/1189113.svg';
+  'https://i.ibb.co/vBZGL9r/heart-1.png';
+
+
+
 function Post(props) {
   const { postsStore } = useAppContext();
   const { usersStore } = useAppContext();
@@ -42,7 +45,7 @@ function Post(props) {
         )}
         <Text
           style={{ fontWeight: isTitle ? 500 : 100 }}
-          className={'lho_post_info'}
+          className={'arten_post_info'}
           text={text}
           break={1}
           level={'span'}
@@ -64,7 +67,7 @@ function Post(props) {
       <AccountsList popupStore={popupStore} usersIds={props.likes} />
       <Align align={'start'}>
         <Card
-          className={'lho_post'}
+          className={'arten_post'}
           header={
             props.showHeader && (
               <Link to={'/' + props.user.username}>
@@ -105,7 +108,7 @@ function Post(props) {
             />
             <Text
               style={{ fontWeight: 500, cursor: 'pointer' }}
-              className={'lho_post_info'}
+              className={'arten_post_info'}
               text={_likes + ' attendees'}
               level={'span'}
               onClick={() => {

@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <BrowserRouter basename="/letshangout_">
+  <BrowserRouter basename="/artenthusiasts">
     <App />
   </BrowserRouter>,
   document.getElementById('root')

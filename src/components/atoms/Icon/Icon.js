@@ -7,7 +7,7 @@ function Icon(props) {
   let _props = {
     ...props,
     ...{
-      className: props.className + ' fa-' + props.size + ' lho_icon',
+      className: props.className + ' fa-' + props.size + ' arten_icon',
       style: GeneralUtil.responsiveObj(props.style),
     },
   };
@@ -26,7 +26,7 @@ Icon.defaultProps = {
   style: {},
   size: 'sm',
   src: null,
-  onClick: () => {},
+  onClick: () => { },
 };
 
 export default Icon;

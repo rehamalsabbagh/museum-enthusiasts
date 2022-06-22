@@ -6,7 +6,7 @@ import Image from '../Image/Image';
 
 function Poppup(props) {
   require('./Popup.css');
-  const className = props.className + ' lho_popup ';
+  const className = props.className + ' arten_popup ';
 
   function close() {
     props.popupStore.setState('close');
@@ -20,7 +20,7 @@ function Poppup(props) {
       onClick={() => close()}
     >
       <Image
-        className={'lho_popup_close'}
+        className={'arten_popup_close'}
         src={'https://flutter-apps.b-cdn.net/goCollect/test/cancel.svg'}
       />
       <Center style={{ cursor: 'auto' }} onClick={(e) => e.stopPropagation()}>

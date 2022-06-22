@@ -11,7 +11,7 @@ import './AddPost.css';
 import UploadImage from '../UploadImage/UploadImage';
 import { useVm } from '../../../context';
 let addpost_btn_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/864/864380.svg';
+  'https://i.ibb.co/smf134s/plus.png';
 
 function AddPost() {
   const [pressCount, setPressCount] = useState(0);
@@ -81,16 +81,16 @@ function AddPost() {
           />
         </Container>
       </Popup>
-      <Container className={'lho_addpost_container'}>
+      <Container className={'arten_addpost_container'}>
         {/* {postsStore.authUserPosts === null &&
         popupStore.state === 'close' &&
         pressCount == 0 ? (
-          <Container className={'lho_addpost_button_animation'} />
+          <Container className={'arten_addpost_button_animation'} />
         ) : (
           <Container />
         )} */}
         <Button
-          className={'lho_addpost_button'}
+          className={'arten_addpost_button'}
           primaryColor={'#ffffff'}
           secondaryColor={'#454545'}
           icon={addPostBtnIcon}

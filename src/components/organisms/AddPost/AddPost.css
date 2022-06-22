@@ -1,4 +1,4 @@
-.lho_addpost_container {
+.arten_addpost_container {
   position: fixed;
   width: 100%;
   height: 100vh;
@@ -9,7 +9,7 @@
   height: 60px !important;
 }
 
-.lho_addpost_button {
+.arten_addpost_button {
   position: absolute;
   bottom: 0px;
   right: 0px;
@@ -21,7 +21,7 @@
   padding: 0 !important;
 }
 
-.lho_addpost_button_animation {
+.arten_addpost_button_animation {
   width: 60px;
   height: 60px;
   border-radius: 500px;
@@ -47,18 +47,18 @@
 }
 
 @media screen and (max-width: 767px) {
-  .lho_addpost_container {
+  .arten_addpost_container {
     bottom: 15px;
     right: 15px;
     width: 50px !important;
     height: 50px !important;
   }
 
-  .lho_addpost_button {
+  .arten_addpost_button {
     width: 50px !important;
     height: 50px !important;
   }
-  .lho_addpost_button_animation {
+  .arten_addpost_button_animation {
     width: 50px;
     height: 50px;
   }

@@ -10,7 +10,7 @@ function UserPage(props) {
   let { usersStore } = useAppContext();
   let user = usersStore.retriveUser(props.match.params.username);
   return (
-    <Container className={'lho_user_page'}>
+    <Container className={'arten_user_page'}>
       <UserProfile user={user} />
       <Spacing space={{ lg: 40, xs: 30 }} />
       <Container style={{ borderBottom: '1px solid #e4e4e4' }} />

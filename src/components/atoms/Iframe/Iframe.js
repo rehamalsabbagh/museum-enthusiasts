@@ -4,7 +4,7 @@ import GeneralUtil from '../../../utils/GeneralUtil';
 function Iframe(props) {
   require('./Iframe.css');
   let _props = {
-    className: props.className + ' lho_iframe',
+    className: props.className + ' arten_iframe',
     style: GeneralUtil.responsiveObj(props.style),
     src: props.src,
   };

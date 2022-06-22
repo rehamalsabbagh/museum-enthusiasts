@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 function Loader(props) {
   require('./Loader.css');
 
-  return <Container {...props} className={props.className + ' lho_loader'} />;
+  return <Container {...props} className={props.className + ' arten_loader'} />;
 }
 
 Loader.defaultProps = {};

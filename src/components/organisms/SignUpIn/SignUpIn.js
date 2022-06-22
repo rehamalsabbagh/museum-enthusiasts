@@ -45,7 +45,7 @@ function SignUpIn() {
 
   return (
     <React.Fragment>
-      <TextLogo text={'Letshangout'} level={{ lg: 'h2' }} />
+      <TextLogo text={'artenthusiasts'} level={{ lg: 'h2' }} />
       <Spacing space={{ lg: 20 }} />
       <Form fields={_fields} errorMessages={_errMsgs} />
     </React.Fragment>

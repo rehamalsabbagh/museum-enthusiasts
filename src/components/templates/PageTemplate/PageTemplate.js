@@ -5,11 +5,11 @@ import AddPost from '../../organisms/AddPost/AddPost';
 
 function PageTemplate(props) {
   return (
-    <Container className={'lho_page'}>
+    <Container className={'arten_page'}>
       <AddPost />
-      <Container className={'lho_page_header'}>{props.header}</Container>
+      <Container className={'arten_page_header'}>{props.header}</Container>
       <Spacing space={{ lg: 100, xs: 80 }} />
-      <Container className={'lho_page_body page_container'}>
+      <Container className={'arten_page_body page_container'}>
         {props.body}
       </Container>
       <Spacing space={{ lg: 50, xs: 35 }} />

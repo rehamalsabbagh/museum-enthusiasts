@@ -6,7 +6,7 @@ import './Align.css';
 function Align(props) {
   let align = GeneralUtil.responsiveObj(props.align);
   return (
-    <Container {...props} className={'lho_align_' + align}>
+    <Container {...props} className={'arten_align_' + align}>
       {props.children}
     </Container>
   );

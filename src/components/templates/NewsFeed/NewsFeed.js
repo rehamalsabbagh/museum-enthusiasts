@@ -19,7 +19,7 @@ const no_following_msg2 = 'Follow your friends and check their hangouts!';
 const no_posts_msg1 = 'Your friends did not post any hangouts yet';
 const no_posts_msg2 = 'Check other friends accounts';
 const search_icon_src =
-  'https://www.flaticon.com/svg/static/icons/svg/975/975658.svg';
+  'https://i.ibb.co/2Pj75rk/search-interface-symbol.png';
 
 function NewsFeed() {
   const { usersStore } = useAppContext();
@@ -73,7 +73,7 @@ function NewsFeed() {
             >
               <Text
                 text={'Search accounts'}
-                className={'lho_newsfeed_search'}
+                className={'arten_newsfeed_search'}
               />
               <Icon src={search_icon_src} size={'lg'} />
             </Row>
@@ -90,12 +90,12 @@ function NewsFeed() {
       {walkthroughShown == null && <WalkThrough popupStore={popupStore} />}
       {walkthroughShown != null && <SearchAccounts popupStore={popupStore} />}
       {postsStore.loading && (
-        <Container className={'lho_newsfeed'}>
+        <Container className={'arten_newsfeed'}>
           <Loader />
         </Container>
       )}
       {!postsStore.loading && (
-        <Container className={'lho_newsfeed'}>
+        <Container className={'arten_newsfeed'}>
           {!usersStore.authUser.following &&
             emptyFeedMessage(no_following_msg1, no_following_msg2)}
           {usersStore.authUser.following &&

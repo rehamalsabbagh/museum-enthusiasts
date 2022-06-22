@@ -1,9 +1,9 @@
-[dir='ltr'] .lho_align_start,
-[dir='rtl'] .lho_align_end {
+[dir='ltr'] .arten_align_start,
+[dir='rtl'] .arten_align_end {
   text-align: left;
 }
 
-[dir='ltr'] .lho_align_end,
-[dir='rtl'] .lho_align_start {
+[dir='ltr'] .arten_align_end,
+[dir='rtl'] .arten_align_start {
   text-align: right;
 }

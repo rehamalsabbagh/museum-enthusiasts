@@ -13,7 +13,7 @@ function Button(props) {
   return (
     <button
       style={style}
-      className={props.className + ' lho_button ' + props.shape}
+      className={props.className + ' arten_button ' + props.shape}
       onMouseOver={() => setHover(true)}
       onMouseOut={() => setHover(false)}
       onClick={() => props.onClick()}
@@ -42,7 +42,7 @@ Button.defaultProps = {
   primaryColor: '#1a73e7',
   secondaryColor: 'white',
   hover: true,
-  onClick: () => {},
+  onClick: () => { },
 };
 
 export default Button;

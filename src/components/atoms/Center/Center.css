@@ -1,4 +1,4 @@
-.lho_center {
+.arten_center {
   position: absolute;
   top: 50%;
   left: 0;
@@ -10,12 +10,12 @@
   /* width: fit-content; */
 }
 
-[dir='ltr'] .lho_center_start,
-[dir='rtl'] .lho_center_end {
+[dir='ltr'] .arten_center_start,
+[dir='rtl'] .arten_center_end {
   right: auto;
 }
 
-[dir='ltr'] .lho_center_end,
-[dir='rtl'] .lho_center_start {
+[dir='ltr'] .arten_center_end,
+[dir='rtl'] .arten_center_start {
   left: auto;
 }

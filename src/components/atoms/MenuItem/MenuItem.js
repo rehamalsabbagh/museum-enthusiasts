@@ -7,7 +7,7 @@ function MenuItem(props) {
   require('./MenuItem.css');
   return (
     <Row
-      className={'lho_menu_item'}
+      className={'arten_menu_item'}
       style={{ lg: { opacity: props.active ? 1 : 0.6, cursor: 'pointer' } }}
       spacing={{ lg: 7 }}
     >
@@ -23,7 +23,7 @@ MenuItem.defaultProps = {
   style: {},
   title: '',
   iconSrc: '',
-  onClick: () => {},
+  onClick: () => { },
 };
 
 export default MenuItem;

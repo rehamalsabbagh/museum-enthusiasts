@@ -1,4 +1,4 @@
-.lho_upload_image {
+.arten_upload_image {
   height: 250px;
   display: flex;
   justify-content: center;
@@ -14,11 +14,11 @@
   cursor: pointer;
 }
 
-.lho_upload_image:focus {
+.arten_upload_image:focus {
   outline: none;
 }
 
-.lho_error_1 {
+.arten_error_1 {
   background-color: #fef3f3 !important;
   border-color: #eadada !important;
 }

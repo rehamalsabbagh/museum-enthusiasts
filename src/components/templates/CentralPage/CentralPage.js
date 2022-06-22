@@ -5,7 +5,7 @@ import './CentralPage.css';
 
 function CentralPage(props) {
   return (
-    <Container className={'lho_central_page page_container'}>
+    <Container className={'arten_central_page page_container'}>
       <Center>{props.body}</Center>
     </Container>
   );

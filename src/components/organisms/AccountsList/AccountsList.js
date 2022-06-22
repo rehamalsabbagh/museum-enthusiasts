@@ -7,7 +7,7 @@ import ListItem from '../../atoms/ListItem/ListItem';
 import Popup from '../../atoms/Popup/Popup';
 import ScrollContainer from '../../atoms/ScrollContainer/ScrollContainer';
 let account_src =
-  'https://ssl.gstatic.com/images/branding/product/1x/avatar_circle_grey_512dp.png';
+  'https://i.ibb.co/grzPnFq/avatar-circle-grey-512dp.png';
 
 function AccountsList(props) {
   const { usersStore } = useAppContext();

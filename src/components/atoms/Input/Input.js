@@ -12,7 +12,7 @@ function Input(props) {
   let _input = (
     <input
       {...props}
-      className={'lho_input ' + level}
+      className={'arten_input ' + level}
       style={{ width: 'calc(' + style.width + ' - 80px)' }}
     />
   );
@@ -21,11 +21,11 @@ function Input(props) {
     <div
       style={style}
       className={
-        ' lho_input_container ' +
+        ' arten_input_container ' +
         props.shape +
-        ' lho_error_' +
+        ' arten_error_' +
         props.error +
-        ' lho_input_' +
+        ' arten_input_' +
         props.type +
         ' ' +
         props.className
@@ -38,7 +38,7 @@ function Input(props) {
           spacing={{ lg: props.prefix ? 15 : 0 }}
           style={{ lg: { textAlign: 'initial' } }}
         >
-          <div className={'lho_input_prefix'}>{props.prefix}</div>
+          <div className={'arten_input_prefix'}>{props.prefix}</div>
           {_input}
         </Row>
       )}

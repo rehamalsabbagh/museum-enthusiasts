@@ -24,13 +24,13 @@ function UploadImage(props) {
         });
         props.onUpload(url);
         setImageUrl('url(' + url + ')');
-      } catch (e) {}
+      } catch (e) { }
     },
     [props]
   );
   const { getRootProps, getInputProps, isDragActive } = useDropzone({ onDrop });
   const _className =
-    'lho_upload_image lho_error_' + props.error + ' ' + props.className;
+    'arten_upload_image arten_error_' + props.error + ' ' + props.className;
 
   return (
     <Container

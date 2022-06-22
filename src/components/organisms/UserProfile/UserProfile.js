@@ -52,10 +52,10 @@ function UserProfile(props) {
       borderRadius: '500px',
     };
     return !_isAuthUser ? (
-      <Container className={'lho_userimage'} style={_style} />
+      <Container className={'arten_userimage'} style={_style} />
     ) : (
       <UploadImage
-        className={'lho_userimage'}
+        className={'arten_userimage'}
         style={_style}
         onUpload={(image) => usersStore.setUserImage(image)}
         directory={'/userimage/' + usersStore.authUser.id}

@@ -4,9 +4,9 @@ import Container from '../Container/Container';
 import './Popover.css';
 
 function Popover(props) {
-  let content_classname = 'lho_popover_content lho_popover_' + props.position;
+  let content_classname = 'arten_popover_content arten_popover_' + props.position;
   return (
-    <Container className={'lho_popover_container'}>
+    <Container className={'arten_popover_container'}>
       {props.trigger}
       <Animation appear={props.appear}>
         <Container className={content_classname}>{props.content}</Container>
