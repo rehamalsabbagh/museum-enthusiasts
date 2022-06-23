@@ -11,7 +11,7 @@ function TextLogo(props) {
 }
 
 TextLogo.defaultProps = {
-  level: { lg: 'h4' },
+  level: { lg: 'h3' },
 };
 
 export default TextLogo;

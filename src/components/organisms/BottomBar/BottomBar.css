@@ -1,0 +1,11 @@
+.arten_bottom_bar {
+  position: fixed;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 20px 0px 40px 0px;
+  border-top: 1px solid #e4e4e4;
+  z-index: 3;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

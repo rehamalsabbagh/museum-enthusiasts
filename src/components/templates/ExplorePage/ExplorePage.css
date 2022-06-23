@@ -1,0 +1,16 @@
+.arten_explore_page_search {
+  color: #1a73e7;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.arten_explore_page{
+  text-align: left;
+}
+
+.save_item{
+  position: absolute;
+  top: 10px;
+  right: 0;
+  width: 25px;
+}

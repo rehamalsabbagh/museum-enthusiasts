@@ -11,6 +11,7 @@ function PageTemplate(props) {
       <Spacing space={{ lg: 100, xs: 80 }} />
       <Container className={'arten_page_body page_container'}>
         {props.body}
+        {props.bottomBar}
       </Container>
       <Spacing space={{ lg: 50, xs: 35 }} />
     </Container>

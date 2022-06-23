@@ -10,6 +10,8 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import UserPage from './components/templates/UserPage/UserPage';
 import NewsFeed from './components/templates/NewsFeed/NewsFeed';
 import './App.css';
+import BottomBar from './components/organisms/BottomBar/BottomBar';
+import ExplorePage from './components/templates/ExplorePage/ExplorePage';
 
 function App() {
   let { usersStore } = useAppContext();
@@ -22,6 +24,7 @@ function App() {
           body={
             <Switch>
               <Route exact={true} path={'/'} render={() => <NewsFeed />} />
+              <Route exact={true} path={'/explore'} render={() => <ExplorePage />} />
               <Route
                 exact={true}
                 path={'/:username'}
@@ -31,6 +34,7 @@ function App() {
               />
             </Switch>
           }
+          bottomBar={<BottomBar />}
         />
       )}
       {!usersStore.authUser && <CentralPage body={<SignUpIn />} />}
