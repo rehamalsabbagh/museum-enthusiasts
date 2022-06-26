@@ -34,7 +34,6 @@ function ExplorePage() {
               }>
               <Container>
                 <Image src={dataSetStore.usersItemId(key) ? save_colored_src : save_src} className={'save_item'} onClick={() => dataSetStore.saveUnsaveItem(key)} />
-                <Spacing space={{ lg: 10 }} />
                 <Text style={{ fontWeight: '500' }} text={_item.name} />
                 <Text text={_item.artist} />
                 <Text text={_item.year} />
