@@ -37,7 +37,7 @@ function App() {
           bottomBar={<BottomBar />}
         />
       )}
-      {!usersStore.authUser && <CentralPage body={<SignUpIn />} />}
+      {!usersStore.authUser && <SignUpIn />}
     </Container>
   );
 }

@@ -14,14 +14,14 @@ function Form(props) {
       appear={_errMsgs}
       trigger={
         <Align align={'start'}>
-          <Card>
-            {props.fields.map((field, key) => (
-              <React.Fragment key={key}>
-                {key !== 0 && fields_space}
-                {field}
-              </React.Fragment>
-            ))}
-          </Card>
+          {/* <Card> */}
+          {props.fields.map((field, key) => (
+            <React.Fragment key={key}>
+              {key !== 0 && fields_space}
+              {field}
+            </React.Fragment>
+          ))}
+          {/* </Card> */}
         </Align>
       }
       content={
