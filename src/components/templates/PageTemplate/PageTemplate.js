@@ -6,9 +6,9 @@ import AddPost from '../../organisms/AddPost/AddPost';
 function PageTemplate(props) {
   return (
     <Container className={'arten_page'}>
-      <AddPost />
+      {/* <AddPost /> */}
       <Container className={'arten_page_header'}>{props.header}</Container>
-      <Spacing space={{ lg: 100, xs: 80 }} />
+      {/* <Spacing space={{ lg: 100, xs: 80 }} /> */}
       <Container className={'arten_page_body page_container'}>
         {props.body}
         {props.bottomBar}

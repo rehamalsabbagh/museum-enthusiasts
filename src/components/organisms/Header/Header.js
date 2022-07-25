@@ -41,12 +41,12 @@ function Header() {
             </Align>
             <Align align={{ lg: 'end' }}>
               <Row spacing={{ lg: 15 }} verticalAlign={'middle'}>
-                <Icon
+                {/* <Icon
                   src={search_src}
                   size={'md'}
                   style={iconStyle}
                   onClick={() => popupStore.setState('open')}
-                />
+                /> */}
                 <Link to={'/'}>
                   <Icon
                     src={signout_src}
@@ -55,13 +55,13 @@ function Header() {
                     onClick={() => signInStore.signOut()}
                   />
                 </Link>
-                <Link to={'/' + usersStore.authUser.username}>
+                {/* <Link to={'/' + usersStore.authUser.username}>
                   <Icon
                     src={userImage}
                     size={'lg'}
                     style={{ ...iconStyle, ...{ borderRadius: '500px' } }}
                   />
-                </Link>
+                </Link> */}
               </Row>
             </Align>
           </Row>

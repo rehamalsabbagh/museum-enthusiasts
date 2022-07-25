@@ -20,7 +20,7 @@ function Button(props) {
     >
       <Row
         verticalAlign={'middle'}
-        spacing={{ lg: props.text && props.icon ? 10 : 0 }}
+        spacing={{ lg: props.text && props.icon ? 15 : 0 }}
       >
         {props.text ? (
           <Text level={{ lg: 'h6' }} {...props.text} />

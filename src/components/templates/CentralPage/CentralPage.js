@@ -5,7 +5,7 @@ import './CentralPage.css';
 
 function CentralPage(props) {
   return (
-    <Container className={'arten_central_page page_container'}>
+    <Container className={'arten_central_page'}>
       <Center>{props.body}</Center>
     </Container>
   );

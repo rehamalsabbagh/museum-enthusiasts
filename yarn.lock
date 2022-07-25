@@ -1242,6 +1242,11 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@protobufjs/utf8/-/utf8-1.1.0.tgz#a777360b5b39a1a2e5106f8e858f2fd2d060c570"
 
+"@ramonak/react-progress-bar@^5.0.1":
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/@ramonak/react-progress-bar/-/react-progress-bar-5.0.1.tgz#16d2f0ed4a695fd9e5e54b45eed927873a710a90"
+  integrity sha512-LMQCkWbMunlpsbfvii+DyUS6MT0gSYfQOCyxEm4NHXRLxYdKUT4civ7nYH559kWPZwm19yEGatqofwwR72sdaA==
+
 "@sheerun/mutationobserver-shim@^0.3.2":
   version "0.3.2"
   resolved "https://registry.yarnpkg.com/@sheerun/mutationobserver-shim/-/mutationobserver-shim-0.3.2.tgz#8013f2af54a2b7d735f71560ff360d3a8176a87b"

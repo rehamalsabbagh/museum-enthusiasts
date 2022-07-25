@@ -25,7 +25,7 @@ const explore_active_src =
 // https://i.ibb.co/MspmmgS/news-1.png
 
 
-function BottomBar() {
+function BottomBar(props) {
   const { signInStore } = useAppContext();
   const iconStyle = { cursor: 'pointer' };
 
@@ -34,8 +34,8 @@ function BottomBar() {
     <React.Fragment>
       <Container className={'arten_bottom_bar'}>
         <Container className={'page_container'}>
-
-          <Row spacing={{ lg: 200 }} verticalAlign={'middle'}>
+          {props.body}
+          {/* <Row spacing={{ lg: 200 }} verticalAlign={'middle'}>
             <Link to={'/explore'}>
               <Icon
                 src={explore_src}
@@ -50,7 +50,7 @@ function BottomBar() {
                 style={iconStyle}
               />
             </Link>
-          </Row>
+          </Row> */}
 
         </Container>
       </Container>
