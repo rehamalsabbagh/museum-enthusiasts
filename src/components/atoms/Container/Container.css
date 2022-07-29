@@ -3,12 +3,12 @@ div {
 }
 
 .page_container {
-  width: 50%;
+  width: 70%;
 }
 
 @media screen and (max-width: 1199px) {
   .page_container {
-    width: 70%;
+    width: 90%;
   }
 }
 

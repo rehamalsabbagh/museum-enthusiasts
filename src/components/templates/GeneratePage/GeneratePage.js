@@ -38,8 +38,21 @@ function GeneratePage(props) {
     });
 
     function updateBrowsingList(newItem) {
-        let _browsingList = [...browsingList, ...[newItem]];
-        setBrowsingList(_browsingList);
+        if (!browsingList.find((item) => item.id === newItem.id) || browsingList.length === 0) {
+            let _browsingList = [...browsingList, ...[newItem]];
+            setBrowsingList(_browsingList);
+        }
+    }
+
+    function removeFromBrowsingList(item) {
+        let filteredBrowsingList = browsingList.filter((browsingListItem) => browsingListItem.name !== item.name);
+        setBrowsingList(filteredBrowsingList);
+        // console.log(browsingList)
+        // let index = browsingList.findIndex((browsingListItem) => browsingListItem.name === item.name)
+        // console.log(index)
+        // var removed = browsingList.splice(index, 1);
+        // console.log(removed)
+        // setBrowsingList(removed);
     }
 
     function filter1() {
@@ -54,11 +67,10 @@ function GeneratePage(props) {
                     if (datasetItem.tags[tagKey] === userInterests[interestsKey].name) {
                         let findIndex = recommondations.findIndex((recommondation) => recommondation.id === datasetKey);
                         if (!recommondations.find((recommondation) => recommondation.id === datasetKey))
-                            recommondations.push({ ...toJS(datasetItem), id: datasetKey, count: userInterests[interestsKey].count });
+                            recommondations.push({ ...toJS(datasetItem), id: datasetKey, count: userInterests[interestsKey].count, shared: userInterests[interestsKey].name });
                         else {
                             let increament = recommondations[findIndex].count + userInterests[interestsKey].count;
-                            recommondations[findIndex] = { ...toJS(datasetItem), id: datasetKey, count: increament }
-                            console.log(recommondations[findIndex].count);
+                            recommondations[findIndex] = { ...toJS(datasetItem), id: datasetKey, count: increament, shared: recommondations[findIndex].shared }
                         }
                     }
                 }
@@ -78,19 +90,19 @@ function GeneratePage(props) {
         return filter2(filter1());
     }
 
-    function items(recommondations) {
-        // let recommondations = getRecommendations();
-        // console.log(recommondations)
+    function items(recommondations, width) {
         let _dataset = [];
         let _count = 0;
         for (const key in recommondations) {
             let _item = recommondations[key];
+            let existsInBrowseList = browsingList.find((item) => item.name === _item.name);
+
             _dataset = [
                 ..._dataset,
                 ...[
                     <React.Fragment key={key}>
                         <Card
-                            onClick={() => browse ? updateBrowsingList(_item) : null}
+                            style={{ width: width }}
                             image={
                                 <div
                                     style={{
@@ -98,18 +110,29 @@ function GeneratePage(props) {
                                         backgroundImage: 'url(' + _item.image + ')'
                                     }}
                                 />
-
-                                // <Image src={_item.image} />
                             }>
                             <div style={{ height: '100px' }}>
-                                {/* <Image src={dataSetStore.usersItemId(key) ? save_colored_src : save_src} className={'save_item'} onClick={() => dataSetStore.saveUnsaveItem(key)} /> */}
-                                <Text style={{ fontWeight: '500' }} text={_item.name} />
-                                <Text text={_item.artist} />
-                                <Text text={_item.year} />
-                                <Text text={_item.location} />
+                                <Row portitions={browse ? [0.5, 0.5] : [0.9, 0]}>
+                                    <div>
+                                        <Text style={{ fontWeight: '500' }} text={_item.name} />
+                                        <Spacing space={10} />
+                                        <Text text={_item.artist + ' - ' + _item.year} />
+                                    </div>
+                                    {browse && <Button
+                                        onClick={() => browse ? existsInBrowseList ? removeFromBrowsingList({ ..._item, id: key }) : updateBrowsingList({ ..._item, id: key }) : () => { }}
+                                        shape={existsInBrowseList ? 'solid' : 'bordered'}
+                                        text={{
+                                            text: existsInBrowseList ? 'Added' : 'Add to list',
+                                        }}
+                                        style={{ height: '32px' }}
+                                    />}
+                                </Row>
+                                <Spacing space={browse ? 17 : 0} />
+                                <Row spacing={7}>
+                                    {_item.tags.map((tag) => { return <div style={{ backgroundColor: '#f8f8f8', padding: '5px 10px 8px 10px', borderRadius: '100px' }}><h7>{tag}</h7></div> })}
+                                </Row>
                             </div>
                         </Card>
-                        {/* {_count !== 0 && <Spacing space={{ lg: 30, xs: 15 }} />} */}
                     </React.Fragment>,
                 ],
             ];
@@ -118,7 +141,47 @@ function GeneratePage(props) {
         return _dataset.reverse();
     }
 
-    let _items = items(browse ? dataSetStore.dataset : [...getRecommendations(), ...browsingList]);
+    let __items = toJS(getRecommendations());
+    let userInterests = toJS(usersStore.authUser.interests);
+    let wholeArr = [];
+    let recommendationsBrowseNumber = Math.round(__items.length / 3);
+    let _items = __items.slice(recommendationsBrowseNumber);
+    let _browseItems = __items.slice(0, recommendationsBrowseNumber);
+
+    for (const _key in userInterests) {
+        let filterr = _browseItems.filter((_item) => _item.shared === userInterests[_key].name);
+        wholeArr.push({ shared: userInterests[_key].name, arr: filterr });
+    }
+
+    let suggestionsDiv = <div>
+        {wholeArr.map((oneArr) => {
+            if (oneArr && oneArr.arr.length >= 1)
+                return <div>
+                    <Spacing space={{ lg: 15 }} />
+                    <h4>{oneArr.shared}</h4>
+                    <Spacing space={{ lg: 15 }} />
+                    <div style={{
+                        overflow: 'auto',
+                        whiteSpace: 'nowrap'
+                    }}>
+                        <Row spacing={15}>{items(oneArr.arr, '450px')}</Row>
+                    </div>
+                </div>
+        })}
+    </div>
+
+    let _itemsDiv = items([..._items, ...browsingList]);
+    let _itemsRow = <Row portitions={{ lg: Array(_itemsDiv.length).fill(0.3333) }} spacing={15}>{_itemsDiv}</Row>;
+    let _dataset = [];
+
+    if (dataSetStore.dataset) {
+        let dataSetStoreDataset = toJS(dataSetStore.dataset);
+        _dataset = dataSetStoreDataset.filter((el) => {
+            return [..._items, ..._browseItems].every((f) => {
+                return f.name !== el.name
+            });
+        });
+    }
     return (
         <Container>
             {/* <CentralPage body={
@@ -133,10 +196,26 @@ function GeneratePage(props) {
                 !dataSetStore.loading && (
                     <Container className={'arten_explore_page'}>
                         <Spacing space={{ lg: 100 }} />
-                        {browse ? <h2>{'Browse and add items'}</h2> : <h2>{'Your generated tour'}</h2>}
-                        <Spacing space={{ lg: 30 }} />
+                        {browse ? <h3>{'Browse and add items'}</h3> : <h3>{'Your generated tour'}</h3>}
+                        {!browse && <Spacing space={{ lg: 20 }} />}
+                        {browse && <div>
+                            <Spacing space={{ lg: 30 }} />
+                            <h6>{'More recommendations'}</h6>
+                            {/* <Spacing space={{ lg: 10 }} /> */}
+                        </div>}
+                        {browse ?
+                            <div>
+                                {suggestionsDiv}
+                                <Spacing space={{ lg: 50 }} />
+                                <h3>{'Other items in this museum'}</h3>
+                                <Spacing space={{ lg: 30 }} />
+                                <Row portitions={{ lg: Array(_dataset.length).fill(0.3333) }} spacing={15}>{items(_dataset)}</Row>;
+                            </div>
 
-                        <Row portitions={{ lg: Array(_items.length).fill(0.3333) }} spacing={15}>{_items}</Row>
+                            : _itemsRow
+                        }
+                        <Spacing space={{ lg: 100 }} />
+
                         <BottomBar
                             body={
                                 <div style={{ textAlign: 'right' }}>
@@ -156,7 +235,6 @@ function GeneratePage(props) {
                                         />}
                                         {browse && <Button
                                             onClick={() => setBrowse(false)}
-
                                             shape={'bordered'}
                                             text={{
                                                 text: 'Check list',

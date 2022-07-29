@@ -74,7 +74,7 @@ function SignUpIn() {
 
             {userSelection === '' ?
               <React.Fragment>
-                <TextLogo text={'artenthusiasts'} level={{ lg: 'h1' }} />
+                <TextLogo text={'MuseumEnthusiasts'} level={{ lg: 'h1' }} />
                 <p style={{ color: 'gray' }}>{'Your customized museum experience'}</p>
                 <Spacing space={{ lg: 60 }} />
               </React.Fragment>
@@ -133,7 +133,7 @@ function SignUpIn() {
                 <Spacing space={{ lg: 20 }} />
                 <div style={{ textAlign: '' }}>
 
-                  <h6 >{'1. Open Artenthusiasts App on your phone.'}</h6>
+                  <h6 >{'1. Open museumenthusiasts App on your phone.'}</h6>
                   <Spacing space={{ lg: 10 }} />
                   <h6 >{'2. Go to settings.'}</h6>
                   <Spacing space={{ lg: 10 }} />

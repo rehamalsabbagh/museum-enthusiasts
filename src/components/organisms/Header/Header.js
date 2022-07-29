@@ -36,7 +36,7 @@ function Header() {
           <Row portitions={{ lg: [0.5, 0.5] }} verticalAlign={'middle'}>
             <Align align={{ lg: 'start' }}>
               <Link to={'/'}>
-                <TextLogo text={'artenthusiasts'} />
+                <TextLogo text={'MuseumEnthusiasts'} />
               </Link>
             </Align>
             <Align align={{ lg: 'end' }}>
@@ -48,12 +48,15 @@ function Header() {
                   onClick={() => popupStore.setState('open')}
                 /> */}
                 <Link to={'/'}>
-                  <Icon
-                    src={signout_src}
-                    size={'md'}
-                    style={iconStyle}
-                    onClick={() => signInStore.signOut()}
-                  />
+                  <Row spacing={10}>
+                    <h6>{'LOGOUT'}</h6>
+                    <Icon
+                      src={signout_src}
+                      size={'md'}
+                      style={iconStyle}
+                      onClick={() => signInStore.signOut()}
+                    />
+                  </Row>
                 </Link>
                 {/* <Link to={'/' + usersStore.authUser.username}>
                   <Icon
