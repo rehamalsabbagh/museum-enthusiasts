@@ -6,6 +6,7 @@ class DataSetStore {
     this.usersStore = usersStore;
     this.dataset = null;
     this.loading = false;
+    this.tourList = null;
   }
 
   getDataSet() {
@@ -14,6 +15,10 @@ class DataSetStore {
       _this.dataset = snapshot.val();
       this.loading = false;
     });
+  }
+
+  setTourList(tourList) {
+    this.tourList = tourList;
   }
 
   usersItemId(itemId) {

@@ -14,32 +14,38 @@ import BottomBar from './components/organisms/BottomBar/BottomBar';
 import ExplorePage from './components/templates/ExplorePage/ExplorePage';
 import OptionsPage from './components/templates/OptionsPage/OptionsPage';
 import GeneratePage from './components/templates/GeneratePage/GeneratePage';
+import TourPage from './components/templates/TourPage/TourPage';
 
 function App() {
   let { usersStore } = useAppContext();
 
+  function pageTemplate(body) {
+    return <PageTemplate
+      header={<Header />}
+      body={body}
+    // bottomBar={<BottomBar />}
+    />
+  }
+
   return (
     <Container className={'App'} dir={'ltr'}>
       {usersStore.authUser && (
-        <PageTemplate
-          header={<Header />}
-          body={
-            <Switch>
-              <Route exact={true} path={'/'} render={() => <OptionsPage />} />
-              <Route exact={true} path={'/explore'} render={() => <ExplorePage />} />
-              <Route exact={true} path={'/generate'} render={() => <GeneratePage />} />
+        <React.Fragment>
+          <Switch>
+            <Route exact={true} path={'/'} render={() => pageTemplate(<OptionsPage />)} />
+            <Route exact={true} path={'/explore'} render={() => pageTemplate(<ExplorePage />)} />
+            <Route exact={true} path={'/generate'} render={() => pageTemplate(<GeneratePage />)} />
+            <Route exact={true} path={'/tour'} render={() => <TourPage />} />
+            <Route
+              exact={true}
+              path={'/:username'}
+              render={(props) => (
+                pageTemplate(<UserPage user={usersStore.authUser} {...props} />)
+              )}
+            />
 
-              <Route
-                exact={true}
-                path={'/:username'}
-                render={(props) => (
-                  <UserPage user={usersStore.authUser} {...props} />
-                )}
-              />
-            </Switch>
-          }
-        // bottomBar={<BottomBar />}
-        />
+          </Switch>
+        </React.Fragment>
       )}
       {!usersStore.authUser && <SignUpIn />}
     </Container>

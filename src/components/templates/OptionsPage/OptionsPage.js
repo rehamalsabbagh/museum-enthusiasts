@@ -30,17 +30,19 @@ function OptionsPage(props) {
                     {/* <Spacing space={{ lg: 6 }} />
                     <h7 style={{ color: 'gray' }}>{'You can edit the list later'}</h7> */}
                     <Spacing space={{ lg: 20 }} />
-                    <Button
-                        // onClick={() => switchState()}
-                        shape={'bordered'}
-                        text={{
-                            text: 'Create a List From Scratch',
-                        }}
-                        icon={{
-                            src: 'https://i.ibb.co/hXKwKh8/choice-1.png',
-                            size: 'lg'
-                        }}
-                    />
+                    <Link to={'/generate'}>
+                        <Button
+                            // onClick={() => switchState()}
+                            shape={'bordered'}
+                            text={{
+                                text: 'Create a List From Scratch',
+                            }}
+                            icon={{
+                                src: 'https://i.ibb.co/hXKwKh8/choice-1.png',
+                                size: 'lg'
+                            }}
+                        />
+                    </Link>
                     {/* https://i.ibb.co/GQTqyvX/choice.png*/}
                 </React.Fragment>}
             />

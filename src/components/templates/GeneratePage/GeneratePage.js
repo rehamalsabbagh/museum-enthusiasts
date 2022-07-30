@@ -13,6 +13,7 @@ import Row from '../../atoms/Row/Row';
 import { toJS } from 'mobx';
 import BottomBar from '../../organisms/BottomBar/BottomBar';
 import Icon from '../../atoms/Icon/Icon';
+import { Link } from 'react-router-dom';
 
 const save_src = 'https://i.ibb.co/M5VLFjL/save-instagram.png';
 const save_colored_src = 'https://i.ibb.co/tsZNFG5/save-instagram-1.png';
@@ -286,15 +287,16 @@ function GeneratePage(props) {
                                                 }}
                                                 style={{ width: '270px' }}
                                             />}
-                                            <Button
-
-                                                // onClick={() => setUserSelection('download_app')}
-                                                // shape={'bordered'}
-                                                text={{
-                                                    text: 'Start my tour',
-                                                }}
-                                                style={{ width: '270px' }}
-                                            />
+                                            <Link to={'/tour'}>
+                                                <Button
+                                                    onClick={() => dataSetStore.setTourList([..._items, ...browsingList])}
+                                                    // onClick={() => setUserSelection('download_app')}
+                                                    // shape={'bordered'}
+                                                    text={{
+                                                        text: 'Start my tour',
+                                                    }}
+                                                    style={{ width: '270px' }}
+                                                /></Link>
                                         </Row>
                                     </div>
 
