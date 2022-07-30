@@ -4,7 +4,7 @@ import Container from '../Container/Container';
 
 function Spacing(props) {
   let space = GeneralUtil.responsiveObj(props.space);
-  return <Container style={{ height: space + 'px' }} />;
+  return <Container {...props} style={{ ...{ height: space + 'px' }, ...{ ...props.style } }} />;
 }
 
 Spacing.defaultProps = {

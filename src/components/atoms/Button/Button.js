@@ -14,10 +14,10 @@ function Button(props) {
     <button
       style={style}
       className={props.className + ' arten_button ' + props.shape}
-      onMouseOver={() => setHover(true)}
-      onMouseOut={() => setHover(false)}
+      // onMouseOver={() => setHover(true)}
+      // onMouseOut={() => setHover(false)}
       // onMouseLeave={() => setHover(false)}
-      onClick={() => { setHover(false); props.onClick() }}
+      onClick={() => { /*setHover(false);*/ props.onClick() }}
     >
       <Row
         verticalAlign={'middle'}

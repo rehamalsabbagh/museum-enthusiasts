@@ -56,7 +56,7 @@ function SignUpIn() {
         {userSelection !== '' ?
           <div
             onClick={() => setUserSelection('')}
-            className={''} style={{ position: 'absolute', textAlign: 'left', left: 0, right: 0, zIndex: '999' }}>
+            className={''} style={{ position: 'absolute', textAlign: 'left', left: 0, right: 0, zIndex: '999', cursor: 'pointer' }}>
             <Spacing space={{ lg: 100 }} />
             <Row spacing={10}>
               <Icon
