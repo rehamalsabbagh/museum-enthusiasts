@@ -145,19 +145,19 @@ function TourPage(props) {
                                 width: '100%',
                                 height: '46px',
                             }}
-                        ></div>
-                        <Button
-                            style={{
-                                width: '100px',
-                                height: '30px',
-                                float: 'right',
-                                margin: '7px'
-                            }}
-                            primaryColor={'#e5e5e5'}
-                            secondaryColor={'#1a73e7'}
-                            text={{ text: 'End tour', level: 'h6' }}
-                        ></Button>
-
+                        >
+                            <Button
+                                style={{
+                                    width: '100px',
+                                    height: '30px',
+                                    float: 'right',
+                                    margin: '7px'
+                                }}
+                                primaryColor={'#e5e5e5'}
+                                secondaryColor={'#1a73e7'}
+                                text={{ text: 'End tour', level: 'h6' }}
+                            ></Button>
+                        </div>
                     </div>
 
                 </div>

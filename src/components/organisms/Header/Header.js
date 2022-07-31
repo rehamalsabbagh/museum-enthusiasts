@@ -48,13 +48,15 @@ function Header() {
                   onClick={() => popupStore.setState('open')}
                 /> */}
                 <Link to={'/'}>
-                  <Row spacing={10}>
+                  <Row spacing={10}
+                    onClick={() => signInStore.signOut()}
+                  >
                     <h6>{'LOGOUT'}</h6>
                     <Icon
                       src={signout_src}
                       size={'md'}
                       style={iconStyle}
-                      onClick={() => signInStore.signOut()}
+
                     />
                   </Row>
                 </Link>

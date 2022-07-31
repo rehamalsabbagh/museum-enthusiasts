@@ -5,8 +5,18 @@ class DataSetStore {
   constructor(usersStore) {
     this.usersStore = usersStore;
     this.dataset = null;
+    this.external = null;
     this.loading = false;
     this.tourList = null;
+  }
+
+  getExternal() {
+    let _this = this;
+    database.ref('/externals/dataset').on('value', (snapshot) => {
+      _this.external = snapshot.val();
+      // console.log(snapshot.val())
+      this.loading = false;
+    });
   }
 
   getDataSet() {
@@ -100,6 +110,7 @@ class DataSetStore {
 
 decorate(DataSetStore, {
   dataset: observable,
+  external: observable,
   loading: observable,
 });
 
