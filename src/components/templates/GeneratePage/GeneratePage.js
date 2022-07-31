@@ -28,7 +28,7 @@ function GeneratePage(props) {
     const { dataSetStore } = useAppContext();
     const { usersStore } = useAppContext();
     const [loading, setLoading] = useState(0);
-    const [browse, setBrowse] = useState(false);
+    const [browse, setBrowse] = useState(props.fromScratch ? true : false);
     const [browsingList, setBrowsingList] = useState([]);
     const [oneItemView, setOneItemView] = useState(null);
 
@@ -174,7 +174,9 @@ function GeneratePage(props) {
     let wholeArr = [];
     let recommendationsBrowseNumber = Math.round(__items.length / 3);
     let _items = __items.slice(recommendationsBrowseNumber);
-    let _browseItems = __items.slice(0, recommendationsBrowseNumber);
+    let _browseItems =
+        props.fromScratch ? __items :
+            __items.slice(0, recommendationsBrowseNumber);
 
     for (const _key in userInterests) {
         let filterr = _browseItems.filter((_item) => _item.shared === userInterests[_key].name);
@@ -199,7 +201,7 @@ function GeneratePage(props) {
         })}
     </div>
 
-    let _itemsDiv = items([..._items, ...browsingList]);
+    let _itemsDiv = items(props.fromScratch ? browsingList : [..._items, ...browsingList]);
     let _itemsRow = <Row portitions={{ lg: Array(_itemsDiv.length).fill(0.3333) }} spacing={15}>{_itemsDiv}</Row>;
     let _dataset = [];
 
@@ -242,7 +244,7 @@ function GeneratePage(props) {
                             </div> </React.Fragment > :
                         <Container className={'arten_explore_page'}>
                             <Spacing space={{ lg: 100 }} />
-                            <h3 style={{ fontWeight: '500' }}>{browse ? 'Browse and add items' : 'Your generated tour'}</h3>
+                            <h3 style={{ fontWeight: '500' }}>{browse ? 'Browse and add items' : props.fromScratch ? 'Your tour list' : 'Your generated tour'}</h3>
                             {!browse && <Spacing space={{ lg: 30 }} />}
                             {browse && <div>
                                 <Spacing space={{ lg: 40 }} />
@@ -253,7 +255,7 @@ function GeneratePage(props) {
                                 <div>
                                     {suggestionsDiv}
                                     <Spacing space={{ lg: 50 }} />
-                                    <h5 style={{ fontWeight: '500' }}>{'Other items in this museum'}</h5>
+                                    <h5 style={{ fontWeight: '500' }}>{'People also liked'}</h5>
                                     <Spacing space={{ lg: 30 }} />
                                     <Row portitions={{ lg: Array(_dataset.length).fill(0.3333) }} spacing={15}>{items(_dataset)}</Row>;
                                 </div>
@@ -285,17 +287,27 @@ function GeneratePage(props) {
                                                 text={{
                                                     text: 'View tour list',
                                                 }}
-                                                style={{ width: '270px' }}
+                                                style={{
+                                                    width: '270px',
+                                                    pointerEvents: props.fromScratch && browsingList.length < 1 ? 'none' : 'auto',
+                                                    opacity: props.fromScratch && browsingList.length < 1 ? '0.5' : '1'
+                                                }}
                                             />}
-                                            <Link to={'/tour'}>
+                                            <Link
+                                                style={{ pointerEvents: props.fromScratch && browsingList.length < 1 ? 'none' : 'auto' }}
+                                                to={'/tour'}>
                                                 <Button
-                                                    onClick={() => dataSetStore.setTourList([..._items, ...browsingList])}
+                                                    onClick={() => dataSetStore.setTourList(props.fromScratch ? browsingList : [..._items, ...browsingList])}
                                                     // onClick={() => setUserSelection('download_app')}
                                                     // shape={'bordered'}
                                                     text={{
                                                         text: 'Start my tour',
                                                     }}
-                                                    style={{ width: '270px' }}
+                                                    style={{
+                                                        width: '270px',
+                                                        pointerEvents: props.fromScratch && browsingList.length < 1 ? 'none' : 'auto',
+                                                        opacity: props.fromScratch && browsingList.length < 1 ? '0.5' : '1'
+                                                    }}
                                                 /></Link>
                                         </Row>
                                     </div>

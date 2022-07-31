@@ -10,10 +10,10 @@ function itemPointDiv(items, number, style) {
     >{number}</div>
 }
 
-export function verticalRooms(items, excludes) {
+export function verticalRooms(roomNumber, items, excludes) {
     return <React.Fragment>
         <div style={{ position: 'absolute', inset: 0, height: '10px' }}>
-            <p style={{ fontSize: '12px', margin: 0 }} >{'Room ' + items[0].room}</p>
+            <p style={{ fontSize: '12px', margin: 0 }} >{'Room ' + roomNumber}</p>
         </div>
         {excludes && !excludes.includes('1') && <div
             // TOP //
@@ -137,10 +137,10 @@ export function verticalRooms(items, excludes) {
     </React.Fragment>
 }
 
-export function horizantalRooms(items, excludes) {
+export function horizantalRooms(roomNumber, items, excludes) {
     return <React.Fragment>
         <div style={{ position: 'absolute', inset: 0, height: '10px' }}>
-            <p style={{ fontSize: '12px', margin: 0 }} >{'Room ' + items[0].room}</p>
+            <p style={{ fontSize: '12px', margin: 0 }} >{'Room ' + roomNumber}</p>
         </div>
         {excludes && !excludes.includes('1') && <div
             // LEFT BOTTOM //

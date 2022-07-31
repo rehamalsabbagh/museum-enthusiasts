@@ -95,23 +95,23 @@ function TourPage(props) {
                     <Row >
                         <div style={mapPortitionStyle}></div>
                         <div style={visibleMapPortitionStyle}>
-                            {verticalRooms(getRoomItems('3'), ["6", "5", "10", "7"])}
+                            {verticalRooms('3', getRoomItems('3'), ["6", "5", "10", "7"])}
                         </div>
                         <div style={mapPortitionStyle}></div>
                     </Row>
                     <Row >
                         <div style={visibleMapPortitionStyle}>
-                            {horizantalRooms(getRoomItems('2'), ["8", "9", "10"])}
+                            {horizantalRooms('2', getRoomItems('2'), ["8", "9", "10"])}
                         </div>
                         <div style={visibleMapPortitionStyle}></div>
                         <div style={visibleMapPortitionStyle}>
-                            {horizantalRooms(getRoomItems('4'), ["5", "6"])}
+                            {horizantalRooms('4', getRoomItems('4'), ["5", "6"])}
                         </div>
                     </Row>
                     <Row >
                         <div style={mapPortitionStyle}></div>
                         <div style={visibleMapPortitionStyle}>
-                            {verticalRooms(getRoomItems('1'), ["1", "6", "10", "5"])}
+                            {verticalRooms('1', getRoomItems('1'), ["1", "6", "10", "5"])}
                         </div>
                         <div style={mapPortitionStyle}></div>
                     </Row>

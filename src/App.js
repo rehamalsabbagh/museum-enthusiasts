@@ -34,7 +34,8 @@ function App() {
           <Switch>
             <Route exact={true} path={'/'} render={() => pageTemplate(<OptionsPage />)} />
             <Route exact={true} path={'/explore'} render={() => pageTemplate(<ExplorePage />)} />
-            <Route exact={true} path={'/generate'} render={() => pageTemplate(<GeneratePage />)} />
+            <Route exact={true} path={'/generate'} render={() => pageTemplate(<GeneratePage fromScratch={false} />)} />
+            <Route exact={true} path={'/create_list'} render={() => pageTemplate(<GeneratePage fromScratch={true} />)} />
             <Route exact={true} path={'/tour'} render={() => <TourPage />} />
             <Route
               exact={true}

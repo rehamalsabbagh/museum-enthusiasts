@@ -30,7 +30,7 @@ function OptionsPage(props) {
                     {/* <Spacing space={{ lg: 6 }} />
                     <h7 style={{ color: 'gray' }}>{'You can edit the list later'}</h7> */}
                     <Spacing space={{ lg: 20 }} />
-                    <Link to={'/generate'}>
+                    <Link to={'/create_list'}>
                         <Button
                             // onClick={() => switchState()}
                             shape={'bordered'}
