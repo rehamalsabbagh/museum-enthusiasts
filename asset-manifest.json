@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/museum-enthusiasts/static/css/main.4d25e88b.chunk.css",
-    "main.js": "/museum-enthusiasts/static/js/main.8946b823.chunk.js",
-    "main.js.map": "/museum-enthusiasts/static/js/main.8946b823.chunk.js.map",
-    "runtime-main.js": "/museum-enthusiasts/static/js/runtime-main.bbfa04a6.js",
-    "runtime-main.js.map": "/museum-enthusiasts/static/js/runtime-main.bbfa04a6.js.map",
-    "static/js/2.8c254f2a.chunk.js": "/museum-enthusiasts/static/js/2.8c254f2a.chunk.js",
-    "static/js/2.8c254f2a.chunk.js.map": "/museum-enthusiasts/static/js/2.8c254f2a.chunk.js.map",
-    "index.html": "/museum-enthusiasts/index.html",
-    "precache-manifest.d9957636ae9424ff380969a703cce545.js": "/museum-enthusiasts/precache-manifest.d9957636ae9424ff380969a703cce545.js",
-    "service-worker.js": "/museum-enthusiasts/service-worker.js",
-    "static/css/main.4d25e88b.chunk.css.map": "/museum-enthusiasts/static/css/main.4d25e88b.chunk.css.map",
-    "static/js/2.8c254f2a.chunk.js.LICENSE": "/museum-enthusiasts/static/js/2.8c254f2a.chunk.js.LICENSE"
+    "main.css": "/museumenthusiasts/static/css/main.4d25e88b.chunk.css",
+    "main.js": "/museumenthusiasts/static/js/main.2edefdbc.chunk.js",
+    "main.js.map": "/museumenthusiasts/static/js/main.2edefdbc.chunk.js.map",
+    "runtime-main.js": "/museumenthusiasts/static/js/runtime-main.c1c0485b.js",
+    "runtime-main.js.map": "/museumenthusiasts/static/js/runtime-main.c1c0485b.js.map",
+    "static/js/2.93d769ea.chunk.js": "/museumenthusiasts/static/js/2.93d769ea.chunk.js",
+    "static/js/2.93d769ea.chunk.js.map": "/museumenthusiasts/static/js/2.93d769ea.chunk.js.map",
+    "index.html": "/museumenthusiasts/index.html",
+    "precache-manifest.c08ac4fdc63d115135fb68027a7715e2.js": "/museumenthusiasts/precache-manifest.c08ac4fdc63d115135fb68027a7715e2.js",
+    "service-worker.js": "/museumenthusiasts/service-worker.js",
+    "static/css/main.4d25e88b.chunk.css.map": "/museumenthusiasts/static/css/main.4d25e88b.chunk.css.map",
+    "static/js/2.93d769ea.chunk.js.LICENSE": "/museumenthusiasts/static/js/2.93d769ea.chunk.js.LICENSE"
   },
   "entrypoints": [
-    "static/js/runtime-main.bbfa04a6.js",
-    "static/js/2.8c254f2a.chunk.js",
+    "static/js/runtime-main.c1c0485b.js",
+    "static/js/2.93d769ea.chunk.js",
     "static/css/main.4d25e88b.chunk.css",
-    "static/js/main.8946b823.chunk.js"
+    "static/js/main.2edefdbc.chunk.js"
   ]
 }
