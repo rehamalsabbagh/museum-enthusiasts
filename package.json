@@ -2,7 +2,7 @@
   "name": "museumenthusiasts",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rehamalsabbagh.github.io/letshangout_",
+  "homepage": "https://rehamalsabbagh.github.io/museumenthusiasts",
   "dependencies": {
     "@babel/plugin-proposal-class-properties": "^7.7.4",
     "@firebase/storage": "^0.4.2",
