@@ -54,7 +54,7 @@ class DataSetStore {
   }
 
   saveInterests(itemId) {
-    let _itemTags = this.dataset[itemId].tags;
+    let _itemTags = this.external[itemId].tags;
     for (const key in _itemTags) {
       let _itemTag = _itemTags[key];
       let _usersInterestId = this.usersInterestId(_itemTag);

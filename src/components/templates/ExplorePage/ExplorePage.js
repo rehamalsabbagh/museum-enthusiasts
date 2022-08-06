@@ -12,8 +12,9 @@ import Text from '../../atoms/Text/Text';
 import BottomBar from '../../organisms/BottomBar/BottomBar';
 import Button from '../../atoms/Button/Button';
 
-const save_src = 'https://i.ibb.co/M5VLFjL/save-instagram.png';
-const save_colored_src = 'https://i.ibb.co/tsZNFG5/save-instagram-1.png';
+const save_src = 'https://i.ibb.co/ZYWgvpS/heart-3.png';
+const save_colored_src = 'https://i.ibb.co/pKXLHQy/heart-2.png';
+
 
 function ExplorePage() {
   const { dataSetStore } = useAppContext();
