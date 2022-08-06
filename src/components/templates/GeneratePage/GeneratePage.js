@@ -42,7 +42,7 @@ function GeneratePage(props) {
         else
             setTimeout(
                 () => setLoading(102),
-                1500
+                1700
             );
     });
 
@@ -84,7 +84,6 @@ function GeneratePage(props) {
                     }
                 }
             }
-
         }
         recommondations = recommondations.sort((a, b) => (a.count > b.count ? 1 : b.count > a.count ? -1 : 0));
         return recommondations;
@@ -169,6 +168,16 @@ function GeneratePage(props) {
         return _dataset.reverse();
     }
 
+    function backButton(text) {
+        return <Row spacing={10} >
+            <Icon
+                src={'https://websiteimages.b-cdn.net/back_arrow_black.svg'}
+                size={'md'}
+            ></Icon>
+            <h6 style={{ fontWeight: '900' }}>{text}</h6>
+        </Row>
+    }
+
     let __items = toJS(getRecommendations());
     let userInterests = toJS(usersStore.authUser.interests);
     let wholeArr = [];
@@ -217,36 +226,35 @@ function GeneratePage(props) {
         <Container>
             {/* <CentralPage body={
                 <Center> */}
-            {loading !== 102 ?
+            {loading !== 102 && !props.fromScratch ?
                 <React.Fragment>
                     <CentralPage
                         body={
                             <div style={{ width: '50%' }}>
-                                <h4>{'We are finding you suggestions,'}</h4>
+                                <h4>{'We are finding you suggestions'}</h4>
                                 <h4>{'Please wait'}</h4>
-                                <Spacing space={20}></Spacing>
+                                <Spacing space={30}></Spacing>
                                 <ProgressBar completed={loading} height={10} bgColor={'#1a73e7'} labelColor={'transparent'} /></div>} />
                 </React.Fragment> :
                 !dataSetStore.loading && (
                     oneItemView ?
                         <React.Fragment>
                             <div
-                                onClick={() => setOneItemView(null)}
                                 className={''} style={{ position: 'absolute', textAlign: 'left', left: 0, right: 0, zIndex: '999', cursor: 'pointer' }}>
                                 <Spacing space={{ lg: 100 }} />
-                                <Row spacing={10}>
-                                    <Icon
-                                        src={'https://websiteimages.b-cdn.net/back_arrow_black.svg'}
-                                        size={'md'}
-                                    ></Icon>
-                                    <h6 style={{ fontWeight: '900' }}>{browse ? 'Back to browsing' : 'Back to tour list'}</h6>
-                                </Row>
+                                <div onClick={() => setOneItemView(null)}>
+                                    {backButton(browse ? 'Back to browsing' : 'Back to tour list')}
+                                </div>
                                 <Spacing space={{ lg: 30 }} />
                                 {cardd(oneItemView, oneItemView.key, null, '700px')}
                                 <Spacing space={{ lg: 30 }} />
                             </div> </React.Fragment > :
                         <Container className={'arten_explore_page'}>
-                            <Spacing space={{ lg: 100 }} />
+                            <Spacing space={{ lg: 80 }} />
+                            <Link to={'/'}>
+                                {backButton('Back')}
+                            </Link>
+                            <Spacing space={{ lg: 60 }} />
                             <h3 style={{ fontWeight: '500' }}>{browse ? 'Browse and add items' : props.fromScratch ? 'Your tour list' : 'Your generated tour'}</h3>
                             {!browse && <Spacing space={{ lg: 30 }} />}
                             {browse && <div>
@@ -273,7 +281,6 @@ function GeneratePage(props) {
                                         <Row spacing={15}>
                                             {!browse && <Button
                                                 onClick={() => setBrowse(true)}
-
                                                 shape={'bordered'}
                                                 text={{
                                                     text: 'Browse and add other items',

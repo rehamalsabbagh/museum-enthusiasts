@@ -14,7 +14,7 @@ function OptionsPage(props) {
     useEffect(() => {
         setTimeout(() => {
             setMessageDisplayed(true)
-        }, 4000);
+        }, 3000);
     });
 
     return (
