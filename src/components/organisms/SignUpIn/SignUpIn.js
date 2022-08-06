@@ -17,6 +17,9 @@ let signup_button_text = 'I have an account';
 function SignUpIn() {
   const [state, setState] = useState('signin');
   const [userSelection, setUserSelection] = useState('');
+  const [createGuestload, setCreateGuestload] = useState(false);
+
+
 
   let { signUpStore } = useAppContext();
   let { signInStore } = useAppContext();
@@ -36,6 +39,27 @@ function SignUpIn() {
         }}
       />
     );
+  }
+
+  function createRandom() {
+    return Math.floor((Math.random() * 100000) + 1);
+  }
+
+  function createGuest() {
+    let pass = createRandom() + '_' + createRandom() + '_pass';
+    signUpStore.onChange('username', createRandom() + '_' + createRandom() + '_user')
+    signUpStore.onChange('email', createRandom() + '_' + createRandom() + '_email')
+    signUpStore.onChange('password', pass)
+    signUpStore.onChange('confirmPassword', pass)
+    ///
+    setTimeout(() => {
+      setCreateGuestload(true);
+      signUpStore.signUp(() => {
+        signInStore.setUser(signUpStore.user);
+        signInStore.signIn();
+        setCreateGuestload(false);
+      });
+    }, 50);
   }
 
   let _fields;
@@ -111,15 +135,21 @@ function SignUpIn() {
                 />
                 <Spacing space={{ lg: 15 }} />
                 <Button
-                  onClick={() => setUserSelection('guest_mode')}
+                  // onClick={() => setUserSelection('guest_mode')}
+                  onClick={() => createGuest()}
                   shape={'bordered'}
                   text={{
                     text: 'Continue as a guest',
                   }}
+                  icon={createGuestload ? {
+                    src: 'https://i.ibb.co/zZncXTh/loading.png'
+                  } : null}
                 />
               </React.Fragment>
               : null
             }
+
+
 
             {/* LOGIN FORM */}
             {userSelection === 'login' ?
