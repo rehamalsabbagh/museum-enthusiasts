@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import Container from '../../atoms/Container/Container';
 import Spacing from '../../atoms/Spacing/Spacing';
 import PostsGrid from '../../organisms/PostsGrid/PostsGrid';

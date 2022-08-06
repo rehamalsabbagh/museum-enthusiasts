@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Container from '../../atoms/Container/Container';
 import Button from '../../atoms/Button/Button';
-import { useAppContext } from '../../../context/AppContext';
+import { useAppContext } from '../../../Context/AppContext';
 import Input from '../../atoms/Input/Input';
 import { observer } from 'mobx-react';
 import Popup from '../../atoms/Popup/Popup';
@@ -9,7 +9,7 @@ import PopupStore from '../../atoms/Popup/PopupStore';
 import Form from '../Form/Form';
 import './AddPost.css';
 import UploadImage from '../UploadImage/UploadImage';
-import { useVm } from '../../../context';
+import { useVm } from '../../../Context';
 let addpost_btn_icon_src =
   'https://i.ibb.co/smf134s/plus.png';
 

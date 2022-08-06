@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { observer } from 'mobx-react';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import Row from '../../atoms/Row/Row';
 import Post from '../Post/Post';
 import Text from '../../atoms/Text/Text';

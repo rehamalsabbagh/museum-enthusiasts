@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import Align from '../../atoms/Align/Align';
 import Card from '../../atoms/Card/Card';
 import Container from '../../atoms/Container/Container';

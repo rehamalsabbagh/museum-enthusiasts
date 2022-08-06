@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { toJS } from 'mobx';
 import Container from '../../atoms/Container/Container';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import Row from '../../atoms/Row/Row';
 import { verticalRooms, horizantalRooms } from './construct';
 import Spacing from '../../atoms/Spacing/Spacing';

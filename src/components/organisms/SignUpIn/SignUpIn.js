@@ -4,7 +4,7 @@ import TextLogo from '../../atoms/TextLogo/TextLogo';
 import Button from '../../atoms/Button/Button';
 import SignIn from '../SignIn/SignIn';
 import SignUp from '../SignUp/SignUp';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import { observer } from 'mobx-react-lite';
 import Form from '../Form/Form';
 import CentralPage from '../../templates/CentralPage/CentralPage';

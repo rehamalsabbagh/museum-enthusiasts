@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useAppContext, useVm } from '../../../context';
+import { useAppContext, useVm } from '../../../Context';
 import Align from '../../atoms/Align/Align';
 import Container from '../../atoms/Container/Container';
 import Row from '../../atoms/Row/Row';

@@ -6,7 +6,7 @@ import Row from '../../atoms/Row/Row';
 import Image from '../../atoms/Image/Image';
 import Text from '../../atoms/Text/Text';
 import Spacing from '../../atoms/Spacing/Spacing';
-import { useAppContext, useVm } from '../../../context';
+import { useAppContext, useVm } from '../../../Context';
 import './Post.css';
 import Align from '../../atoms/Align/Align';
 import { Link } from 'react-router-dom';

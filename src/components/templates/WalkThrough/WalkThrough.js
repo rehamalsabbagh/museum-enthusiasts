@@ -6,7 +6,7 @@ import Text from '../../atoms/Text/Text';
 import Container from '../../atoms/Container/Container';
 import Popup from '../../atoms/Popup/Popup';
 import Slider from 'react-slick';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import './WalkThrough.css';
 
 const walk_through_img_domain = 'https://websiteimages.b-cdn.net/test/';

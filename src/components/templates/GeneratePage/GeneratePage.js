@@ -8,7 +8,7 @@ import ProgressBar from "@ramonak/react-progress-bar";
 import Image from '../../atoms/Image/Image';
 import Card from '../../atoms/Card/Card';
 import Text from '../../atoms/Text/Text';
-import { useAppContext } from '../../../context';
+import { useAppContext } from '../../../Context';
 import Row from '../../atoms/Row/Row';
 import { toJS } from 'mobx';
 import BottomBar from '../../organisms/BottomBar/BottomBar';

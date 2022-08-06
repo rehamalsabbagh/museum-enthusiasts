@@ -4,7 +4,7 @@ import Container from './components/atoms/Container/Container';
 import PageTemplate from './components/templates/PageTemplate/PageTemplate';
 import Header from './components/organisms/Header/Header';
 import SignUpIn from './components/organisms/SignUpIn/SignUpIn';
-import { useAppContext } from './context';
+import { useAppContext } from './Context';
 import CentralPage from './components/templates/CentralPage/CentralPage';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import UserPage from './components/templates/UserPage/UserPage';

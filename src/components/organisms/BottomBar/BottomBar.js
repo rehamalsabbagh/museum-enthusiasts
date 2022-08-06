@@ -4,11 +4,11 @@ import Container from '../../atoms/Container/Container';
 import Icon from '../../atoms/Icon/Icon';
 import Row from '../../atoms/Row/Row';
 import TextLogo from '../../atoms/TextLogo/TextLogo';
-import { useAppContext } from '../../../context/AppContext';
+import { useAppContext } from '../../../Context/AppContext';
 import { Link } from 'react-router-dom';
 import PopupStore from '../../atoms/Popup/PopupStore';
 import './BottomBar.css';
-import { useVm } from '../../../context';
+import { useVm } from '../../../Context';
 
 const newsfeed_src =
   'https://i.ibb.co/5jgssdj/1549510.png';

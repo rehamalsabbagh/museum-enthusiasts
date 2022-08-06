@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useAppContext, useVm } from '../../../context';
+import { useAppContext, useVm } from '../../../Context';
 import Container from '../../atoms/Container/Container';
 import Loader from '../../atoms/Loader/Loader';
 import Spacing from '../../atoms/Spacing/Spacing';

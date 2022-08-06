@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { useAppContext, useVm } from '../../../context';
+import { useAppContext, useVm } from '../../../Context';
 import Center from '../../atoms/Center/Center';
 import Container from '../../atoms/Container/Container';
 import Icon from '../../atoms/Icon/Icon';
