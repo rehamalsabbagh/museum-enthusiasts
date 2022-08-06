@@ -5,6 +5,8 @@ function itemPointDiv(items, number, style) {
         style={{
             position: 'absolute',
             backgroundColor: items.find((item) => item.position === number) ? '#ff7878' : 'white',
+            fontSize: '12px',
+            fontWeight: '500',
             ...style
         }}
     >{number}</div>
@@ -20,8 +22,10 @@ export function verticalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '50px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '1') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 0,
                 right: 0,
@@ -32,9 +36,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // LEFT TOP//
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '2') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 10,
                 left: 0,
             }}
@@ -44,9 +50,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // LEFT TOP MIDDLE //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '3') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 27,
                 left: 0,
             }}
@@ -56,9 +64,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // LEFT BOTTOM MIDDLE //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '4') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 44,
                 left: 0,
             }}
@@ -67,9 +77,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // LEFT BOTTOM //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '5') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 61,
                 left: 0,
             }}
@@ -80,8 +92,10 @@ export function verticalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '50px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '6') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 bottom: 0,
                 left: 0,
                 right: 0,
@@ -92,9 +106,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // RIGHT BOTTOM //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '7') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 61,
                 right: 0,
             }}
@@ -104,9 +120,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // RIGHT BOTTOM MIDDLE //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '8') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 44,
                 right: 0,
             }}
@@ -116,9 +134,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // RIGHT TOP MIDDLE //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '9') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 27,
                 right: 0,
             }}
@@ -127,9 +147,11 @@ export function verticalRooms(roomNumber, items, excludes) {
             // RIGHT TOP//
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '12px',
                 backgroundColor: items.find((item) => item.position === '10') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 10,
                 right: 0,
             }}
@@ -147,8 +169,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '1') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 61,
             }}
@@ -159,8 +183,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '2') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 44,
             }}
@@ -171,8 +197,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '3') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 27,
             }}
@@ -183,8 +211,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '4') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 10,
             }}
@@ -194,9 +224,11 @@ export function horizantalRooms(roomNumber, items, excludes) {
             // LEFT //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '50px',
                 backgroundColor: items.find((item) => item.position === '5') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 left: 0,
                 bottom: 0,
@@ -208,8 +240,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '6') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 bottom: 0,
                 right: 61,
             }}
@@ -220,8 +254,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '7') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 bottom: 0,
                 right: 44,
             }}
@@ -232,8 +268,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '8') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 bottom: 0,
                 right: 27,
             }}
@@ -244,8 +282,10 @@ export function horizantalRooms(roomNumber, items, excludes) {
             style={{
                 position: 'absolute',
                 width: '12px',
-                height: '7px',
+                height: '13px',
                 backgroundColor: items.find((item) => item.position === '9') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 bottom: 0,
                 right: 10,
             }}
@@ -255,9 +295,11 @@ export function horizantalRooms(roomNumber, items, excludes) {
             // RIGHT //
             style={{
                 position: 'absolute',
-                width: '7px',
+                width: '13px',
                 height: '50px',
                 backgroundColor: items.find((item) => item.position === '10') ? '#ff7878' : 'white',
+                fontSize: '12px',
+                fontWeight: '500',
                 top: 0,
                 right: 0,
                 bottom: 0,
