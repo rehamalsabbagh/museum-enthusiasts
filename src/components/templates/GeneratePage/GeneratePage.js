@@ -222,6 +222,9 @@ function GeneratePage(props) {
                     <CentralPage
                         body={
                             <div style={{ width: '50%' }}>
+                                <h4>{'We are finding you suggestions,'}</h4>
+                                <h4>{'Please wait'}</h4>
+                                <Spacing space={20}></Spacing>
                                 <ProgressBar completed={loading} height={10} bgColor={'#1a73e7'} labelColor={'transparent'} /></div>} />
                 </React.Fragment> :
                 !dataSetStore.loading && (
