@@ -4,6 +4,7 @@ import Spacing from '../../atoms/Spacing/Spacing';
 import Button from '../../atoms/Button/Button';
 import { observer } from 'mobx-react';
 import { useAppContext } from '../../../Context/index.js';
+import { Link } from 'react-router-dom';
 
 function SignIn() {
   const { signInStore } = useAppContext();
@@ -25,12 +26,14 @@ function SignIn() {
         onChange={(e) => signInStore.onChange('password', e.target.value)}
       />
       {fields_spacing}
-      <Button
-        text={{ text: 'Sign In' }}
-        onClick={() => {
-          signInStore.signIn();
-        }}
-      />
+      <Link to={'/'}>
+        <Button
+          text={{ text: 'Sign In' }}
+          onClick={() => {
+            signInStore.signIn();
+          }}
+        />
+      </Link>
     </React.Fragment>
   );
 }

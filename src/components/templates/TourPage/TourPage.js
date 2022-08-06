@@ -8,15 +8,36 @@ import Spacing from '../../atoms/Spacing/Spacing';
 import Card from '../../atoms/Card/Card';
 import Text from '../../atoms/Text/Text';
 import Button from '../../atoms/Button/Button';
+import Image from '../../atoms/Image/Image';
+import Icon from '../../atoms/Icon/Icon';
+// import usersStore from '../../../stores/UsersStore';
+
+const save_src = 'https://i.ibb.co/ZYWgvpS/heart-3.png';
+const save_colored_src = 'https://i.ibb.co/pKXLHQy/heart-2.png';
+
 let count = 0;
 function TourPage(props) {
     const { dataSetStore } = useAppContext();
+    const { usersStore } = useAppContext();
+
     const [currentRoom, setCurrentRoom] = useState('1');
+    const [likedItems, setLikedItems] = useState([]);
+
 
 
     useEffect(() => {
         dataSetStore.getDataSet();
     });
+
+    function updateLikedItems(key) {
+        if (!likedItems.includes(key)) {
+            setLikedItems([...likedItems, ...[key]]);
+        }
+        else {
+            let filteredLikedItems = likedItems.filter((item) => item !== key);
+            setLikedItems(filteredLikedItems);
+        }
+    }
 
 
     function getRoomItems(RoomNumber) {
@@ -36,7 +57,7 @@ function TourPage(props) {
 
     function items(arr) {
         return <React.Fragment>
-            {arr.map((_item) => {
+            {arr.map((_item, key) => {
                 console.log(_item)
                 return <Card
                     style={{ width: arr.length === 1 ? '256px' : '216px', display: 'inline-block', marginLeft: '7px' }}
@@ -61,8 +82,15 @@ function TourPage(props) {
                             >{_item.position}</div>
                         </div>
                     }>
-                    <div style={{ textAlign: 'left' }}>
-                        <p style={{ fontSize: '10px', margin: '0' }} >{_item.name}</p>
+                    <div style={{ position: 'relative' }}>
+                        {/* <Row spacing={100}> */}
+                        <p style={{ fontSize: '10px', margin: '0', top: '-6px', position: 'absolute', left: 0, }} >{_item.name}</p>
+                        <Image
+                            style={{ position: 'absolute', right: 0, top: '-10px', width: '20px' }}
+                            onClick={() => updateLikedItems(key)}
+                            src={likedItems.includes(key) ? save_colored_src : save_src}
+                        ></Image>
+                        {/* </Row> */}
                     </div>
                 </Card>
 
