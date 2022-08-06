@@ -42,7 +42,7 @@ function SignUpIn() {
   let _errMsgs;
   if (state === 'signin') {
     _errMsgs = signInStore.errorMessages;
-    _fields = [<SignIn />, switchButton(signin_button_text)];
+    _fields = [<SignIn />];
   }
   if (state === 'signup') {
     _errMsgs = signUpStore.errorMessages;
