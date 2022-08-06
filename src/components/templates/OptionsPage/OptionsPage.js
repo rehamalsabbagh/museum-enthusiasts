@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { observer } from 'mobx-react';
 import { Link } from 'react-router-dom';
+import { useAppContext } from '../../../Context';
 import Button from '../../atoms/Button/Button';
 import Center from '../../atoms/Center/Center';
 import Container from '../../atoms/Container/Container';
@@ -8,17 +10,9 @@ import Spacing from '../../atoms/Spacing/Spacing';
 import CentralPage from '../CentralPage/CentralPage';
 
 function OptionsPage(props) {
-    const [messageDisplayed, setMessageDisplayed] = useState(false);
-
-
-    useEffect(() => {
-        setTimeout(() => {
-            setMessageDisplayed(true)
-        }, 3000);
-    });
-
+    const { signInStore } = useAppContext();
     return (
-        !messageDisplayed ?
+        !signInStore.showInterface ?
             <CentralPage body={<div>
                 <Image
                     src={'https://i.ibb.co/PtchbP1/correct.png'}
@@ -69,4 +63,4 @@ function OptionsPage(props) {
     );
 }
 
-export default OptionsPage;
+export default observer(OptionsPage);

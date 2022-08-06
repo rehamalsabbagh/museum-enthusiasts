@@ -35,9 +35,9 @@ function Header() {
         <Container className={'page_container'}>
           <Row portitions={{ lg: [0.5, 0.5] }} verticalAlign={'middle'}>
             <Align align={{ lg: 'start' }}>
-              <Link to={'/'}>
-                <TextLogo text={'MuseumEnthusiasts'} />
-              </Link>
+              {/* <Link to={'/'}> */}
+              <TextLogo text={'MuseumEnthusiasts'} />
+              {/* </Link> */}
             </Align>
             <Align align={{ lg: 'end' }}>
               <Row spacing={{ lg: 15 }} verticalAlign={'middle'}>

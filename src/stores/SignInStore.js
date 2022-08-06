@@ -8,6 +8,7 @@ class SignInStore {
   constructor(usersStore) {
     this.usersStore = usersStore;
     this.errorMessages = [];
+    this.showInterface = false;
     this.user = {
       username: DEFAULT_FIELD_VALUE,
       password: DEFAULT_FIELD_VALUE,
@@ -50,6 +51,9 @@ class SignInStore {
     if (!_allTrue) this.handleErrors(_booleans);
     if (_allTrue) {
       this.usersStore.authUser = __user;
+      setTimeout(() => {
+        this.showInterface = true;
+      }, 3000);
     }
   }
 
@@ -71,5 +75,6 @@ decorate(SignInStore, {
   errorMessages: observable,
   authenticated: observable,
   user: observable,
+  showInterface: observable,
 });
 export default SignInStore;
